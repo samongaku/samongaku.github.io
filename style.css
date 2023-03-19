@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+*{
+    margin: 0;
+}
+
+body, html{
+    height: 100%;
+}
+
+header{
+    position: fixed; top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#logo{
+    width: 100px;
+    margin: 10px;
+}
+
+#mainNav ul{
+    list-style: none;
+    padding: 0; margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+#mainNav ul li{
+    padding: 10px;
+}
+
+#mainNav ul li a{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.2em;
+    font-family: Noto Serif;
+    padding: 10px;
+}
+
+#mainNav ul li a:hover{
+    background: radial-gradient(circle at center, rgba(255,255,255) 0, rgba(0,0,0,0) 100%);
+}
+
+#menuToggle{
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+#menuToggle img{
+    width: 100%;
+}
+
+#title{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background: red;
+    font-size: 4em;
+    color: white;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+#bg-img{
+    background: url(japan.jpg) right center / cover no-repeat fixed;
+    height: 100%;
+}
+
+#logo-bg{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(197, 197, 197, 0.7);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px){
+    #menuToggle{
+        display: none;
+    }
+    #mainNav{
+        position: static;
+    }
+    #mainNav ul{
+        flex-direction: row;
+    }
+}
