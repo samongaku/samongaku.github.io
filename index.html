@@ -10,15 +10,16 @@
 <body>
 
     <header id="mainHeader">
+        <button id="menuToggle" onclick="display_menu()"><img src="hamburger.png" alt="Ouvrir / Fermer le menu" /></button>
         <nav id="mainNav">
             <ul>
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">Vocabulaire</a></li>
                 <li><a href="#">Grammaire</a></li>
+                <li><a href="#">Evenements</a></li>
                 <li><a href="#">Ressources</a></li>
             </ul>
         </nav>
-        <button id="menuToggle"><img src="img/hamburger.png" alt="Ouvrir / Fermer le menu" /></button>
     </header>
     
     <div id="bg-img"></div>
@@ -27,7 +28,39 @@
         <div id="title">日本語</div>
     </div>
 
+    <div class="bg-content" id="bg1">
+        <div class="infos" id="actu">
+            <span class="subtitle">Prochainement</span>
+            -Mercredi 22 mars<br>
+            -vocabulaire<br>
+            -point grammaire<br>
+            -activités<br>
+        </div>
+    </div>
+
+    <div class="bg-content" id="bg2">
+        <div class="infos" id="summary">
+            <span class="subtitle">Résumés des séances</span>
+            <details>
+                <summary>Date</summary>
+                Kahoot!
+            </details>
+        </div>
+    </div>
+
+    <footer>
+        Pied de page
+    </footer>
+
 </body>
 <script>
+
+    var menu = document.getElementById("mainNav");
+    
+    function display_menu()
+    {
+        menu.style.display = menu.style.display == "block" ? "none" : "block";
+    }
+
 </script>
 </html>

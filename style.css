@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 
 *{
     margin: 0;
@@ -7,6 +8,7 @@
 
 body, html{
     height: 100%;
+    font-family: Noto Serif JP;
 }
 
 header{
@@ -14,11 +16,16 @@ header{
     z-index: 1;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
 }
 
 #logo{
     width: 100px;
     margin: 10px;
+}
+
+#mainNav{
+    display: none;
 }
 
 #mainNav ul{
@@ -48,7 +55,7 @@ header{
 }
 
 #menuToggle{
-    position: relative;
+    position: absolute; top 0; right: 0;
     z-index: 2;
     background-color: transparent;
     width: 40px;
@@ -87,14 +94,52 @@ header{
     align-items: center;
 }
 
+.subtitle{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 7vw;
+    font-family: Rye;
+}
+
+.bg-content{
+    height: 600px;
+    box-shadow: 0 5px 10px 3px;
+    margin: 50px;
+    background: center / cover no-repeat;
+}
+
+#bg1{
+    background-image: url(sakura.jpg);
+}
+
+#bg2{
+    background-image: url(flag.png);
+}
+
+.infos{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(197, 197, 197, 0.8);
+}
+
+details summary{
+    cursor: pointer;
+}
+
 @media screen and (min-width: 768px){
     #menuToggle{
         display: none;
     }
     #mainNav{
-        position: static;
+        display: block;
     }
     #mainNav ul{
         flex-direction: row;
+    }
+    .subtitle{
+        font-size: 3em;
     }
 }
