@@ -13,16 +13,17 @@
         <button id="menuToggle" onclick="display_menu()"><img src="hamburger.png" alt="Ouvrir / Fermer le menu" /></button>
         <nav id="mainNav">
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Vocabulaire</a></li>
-                <li><a href="#">Grammaire</a></li>
-                <li><a href="#">Evenements</a></li>
-                <li><a href="#">Ressources</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="vocabulaire.html">Vocabulaire</a></li>
+                <li><a href="grammaire.html">Grammaire</a></li>
+                <li><a href="evenements.html">Evenements</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
             </ul>
         </nav>
     </header>
     
-    <div id="bg-img"></div>
+    <div class="mainBg" id="bg-img"></div>
+    <div class="mainBg" id="bg-filter"></div>
 
     <div id="logo-bg">
         <div id="title">日本語</div>
@@ -30,27 +31,82 @@
 
     <div class="bg-content" id="bg1">
         <div class="infos" id="actu">
+            
             <span class="subtitle">Prochainement</span>
-            -Mercredi 22 mars<br>
-            -vocabulaire<br>
-            -point grammaire<br>
-            -activités<br>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-header"></div>
+                    <div class="card-date">Mercredi<br><b>22</b><br>Mars</div>
+                </div>
+            </div>
+            
+            <div class="info-content">
+                <p id="activities">
+                    <b>Activités</b><br>
+                    <br>
+                    Ecriture des hiraganas あいうえお<br>
+                    <i>
+                        Tracer chaque hiragana en respectant l'ordre des traits<br>
+                        Ecrire des mots composés de ces hiraganas<br>
+                    </i>
+                    Quiz des hiraganas avec <a href="https://kahoot.it/" target="_blank">kahoot</a><br>
+                    <i>
+                        Répondre le plus rapidement aux questions affichées à l'écran, chaque bonne réponse apportant des points, un classement est établi<br>
+                    </i>
+                    Leçon sur les verbes<br>
+                    <i>
+                        Apprendre du nouveau vocabulaire<br>
+                        Etudier la grammaire<br>
+                        Faire des exercices<br>
+                    </i>
+                </p>
+                <p id="grammar">
+                    <b>Points Grammaire</b><br>
+                    <br>
+                    Les verbes<br>
+                    <br>
+                    Etudier et comprendre les différentes formes verbales (en -u et en -masu)<br>
+                    Poser des questions avec la particule 'ka'<br> 
+                    Former la négation avec -nai et -masen<br>
+                </p>
+                <p id="vocabulary">
+                    <b>Vocabulaire</b><br>
+                    <br>
+                    たべる taberu manger<br>
+                    のむ nomu boire<br>
+                    かく kaku écrire<br>
+                    いく iku aller<br>
+                    やすむ yasumu se reposer<br>
+                    みる miru regarder<br>
+                    およぐ oyogu nager<br>
+                    はなす hanasu parler<br>
+                    でかける dekakeru sortir<br>
+                    いれる ireru mettre<br>
+                    かう kau acheter<br>
+                    いう iu dire<br>
+                    うたう utau chanter<br>
+                    はらう harau payer<br>
+                    あらう arau laver<br>
+                    まつ matsu attendre<br>
+                    かえる kaeru transformer, revenir<br>
+                </p>
+            </div>
+            
         </div>
     </div>
-
+<!--
     <div class="bg-content" id="bg2">
         <div class="infos" id="summary">
             <span class="subtitle">Résumés des séances</span>
-            <details>
-                <summary>Date</summary>
-                Kahoot!
-            </details>
+            <div class="info-content">
+                Choix de la date
+                <input type="date">
+            </div>
         </div>
     </div>
-
-    <footer>
-        Pied de page
-    </footer>
+-->
+    <footer></footer>
 
 </body>
 <script>

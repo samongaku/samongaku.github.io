@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nihongo</title>
+    <link rel="shortcut icon" href="icon.png">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+
+    div.subtitle{
+        margin-top: 100px;
+    }
+
+    #voc{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 50px;
+    }
+
+    .vocabulary{
+        box-shadow: inset 0 0 10px 2px white;
+        background-color: rgba(248, 190, 255, 0.5);
+        padding: 30px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+</style>
+<body>
+
+    <header id="mainHeader">
+        <button id="menuToggle" onclick="display_menu()"><img src="hamburger.png" alt="Ouvrir / Fermer le menu" /></button>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="vocabulaire.html">Vocabulaire</a></li>
+                <li><a href="grammaire.html">Grammaire</a></li>
+                <li><a href="evenements.html">Evenements</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="mainBg" id="bg-img"></div>
+    <div class="mainBg" id="bg-filter"></div>
+
+    <div class="subtitle">Vocabulaire</div>
+
+    <div id="voc">
+
+        <div class="vocabulary">
+            <b>Premiers Mots</b><br>
+            <br>
+            日本 nihon Japon<br>
+            わたし watashi je<br>
+            あなた anata tu<br>
+            かれ kare il<br>
+            かのじょ kanojo elle<br>
+            わたし たち watashi tachi nous<br>
+            あなた たち anata tachi vous<br>
+            かれ たち kare tachi ils<br>
+            かのじょ たち kanojo tachi elles<br>
+            いぬ inu chien<br>
+            ねこ neko chat<br>
+            がくせい gakusei étudiant<br>
+        </div>
+
+        <div class="vocabulary">
+            <b>Verbes</b><br>
+            <br>
+            たべる taberu manger<br>
+            のむ nomu boire<br>
+            かく kaku écrire<br>
+            いく iku aller<br>
+            やすむ yasumu se reposer<br>
+            みる miru regarder<br>
+            およぐ oyogu nager<br>
+            はなす hanasu parler<br>
+            でかける dekakeru sortir<br>
+            いれる ireru mettre<br>
+            かう kau acheter<br>
+            いう iu dire<br>
+            うたう utau chanter<br>
+            はらう harau payer<br>
+            あらう arau laver<br>
+            まつ matsu attendre<br>
+            かえる kaeru transformer, revenir<br>
+        </div>
+
+    </div>
+
+    <footer></footer>
+
+</body>
+<script>
+
+    var menu = document.getElementById("mainNav");
+    
+    function display_menu()
+    {
+        menu.style.display = menu.style.display == "block" ? "none" : "block";
+    }
+
+</script>
+</html>
