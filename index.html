@@ -7,6 +7,18 @@
     <link rel="shortcut icon" href="icon.png">
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
+<style>
+
+    input, select{
+        font-size: large;
+    }
+
+    #date-selection{
+        margin: 20px;
+        font-size: 1.3em;
+    }
+
+</style>
 <body>
 
     <header id="mainHeader">
@@ -95,17 +107,92 @@
             
         </div>
     </div>
-<!--
+    
     <div class="bg-content" id="bg2">
         <div class="infos" id="summary">
+
             <span class="subtitle">Résumés des séances</span>
-            <div class="info-content">
-                Choix de la date
-                <input type="date">
+
+            <div id="date-selection">
+                Séance n° <input id="num" type="number" value="1" min="1" max="1" onkeyup="check_nb()">
+                Mercredi
+                <select id="dayNumber">
+                    <option>15</option>
+                </select>
+                <select id="monthSelect" onclick="selectMonth()">
+                    <option>Janvier</option>
+                    <option>Février</option>
+                    <option selected>Mars</option>
+                    <option>Avril</option>
+                    <option>Mai</option>
+                    <option>Juin</option>
+                    <option>Juillet</option>
+                    <option>Aout</option>
+                    <option>Septembre</option>
+                    <option>Octobre</option>
+                    <option>Novembre</option>
+                    <option>Décembre</option>
+                </select>
+                <select>
+                    <option>2023</option>
+                </select>
             </div>
+
+            <div class="info-content">
+
+                <p id="activities">
+                    <b>Activités</b><br>
+                    <br>
+                    Quiz des hiraganas avec <a href="https://kahoot.it/" target="_blank">kahoot</a><br>
+                    <i>
+                        Répondre le plus rapidement aux questions affichées à l'écran, chaque bonne réponse apportant des points, un classement est établi<br>
+                    </i>
+                </p>
+                <p id="grammar">
+                    <b>Points Grammaire</b><br>
+                    <br>
+                    Aucun point grammaire n'a été abordé durant cette séance
+                </p>
+                <p id="vocabulary">
+                    <b>Vocabulaire</b><br>
+                    <br>
+                    本 hon livre<br>
+                    日本 nihon Japon<br>
+                    わたし watashi je<br>
+                    あなた anata tu<br>
+                    かれ kare il<br>
+                    かのじょ kanojo elle<br>
+                    わたし たち watashi tachi nous<br>
+                    あなた たち anata tachi vous<br>
+                    かれ たち kare tachi ils<br>
+                    かのじょ たち kanojo tachi elles<br>
+                    ひと hito personne<br>
+                    おんな onna femme<br>
+                    こ ko enfant<br>
+                    がくせい gakusei étudiant<br>
+                    いぬ inu chien<br>
+                    ねこ neko chat<br>
+                    うま uma cheval<br>
+                    うし ushi vache<br>
+                    さかな sakana poisson<br>
+                    き ki arbre<br>
+                    にく niku viande<br>
+                    みず mizu eau<br>
+                    さけ sake alcool<br>
+                    あめ ame pluie<br>
+                    ゆき yuki neige<br>
+                    なつ natsu été<br>
+                    ふゆ fuyu hiver<br>
+                    こころ kokoro coeur<br>
+                    みせ mise magasin<br>
+                    くるま kuruma voiture<br>
+                </p>
+
+            </div>
+
         </div>
     </div>
--->
+
     <footer></footer>
 
 </body>
@@ -116,6 +203,23 @@
     function display_menu()
     {
         menu.style.display = menu.style.display == "block" ? "none" : "block";
+    }
+
+    function check_nb()
+    {
+        var num = document.getElementById("num");
+        if (num.value > num.max)
+            num.value = num.max;
+        if (num.value < 0)
+            num.value = 1;
+    }
+
+    function selectMonth()
+    {
+        if (document.getElementById("monthSelect").value != "Mars")
+            document.getElementById("dayNumber").innerHTML = "";
+        else
+            document.getElementById("dayNumber").innerHTML = "<option>15</option>";
     }
 
 </script>
