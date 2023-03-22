@@ -13,15 +13,21 @@
         margin-top: 100px;
     }
 
-    #voc{
+    #container{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         margin: 50px;
     }
+    
+    #bg-melonpan{
+        background-image: url(melonpan.png);
+        background-size: cover;
+    }
 
-    .vocabulary{
+    .content{
         box-shadow: inset 0 0 10px 2px white;
-        background-color: rgba(248, 190, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.3);
         padding: 30px;
         text-align: center;
         font-size: 1.5em;
@@ -48,10 +54,26 @@
 
     <div class="subtitle">Evenements</div>
 
-    <div id="voc">
+    <div id="container">
 
-        <div class="vocabulary">
-            <b>Contenu bientot disponible</b><br>
+        <div id="bg-melonpan">
+            <div class="content">
+            
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-header"></div>
+                        <div class="card-date">Jeudi<br><b>30</b><br>Mars</div>
+                    </div>
+                </div>
+
+                <b>Préparation de melon pan</b><br>
+                <br>
+                Préparation de brioches japonaises sucrées en forme de melon appelées 'melon pan', à partir de 14h le jeudi 30 mars à la cafeteria de l'école 42<br>
+                Dégustation le soir et vente des produits<br>
+                Le lendemain, cuisson de la pâte restante pour dégustation et vente tout l'après-midi<br>
+                <a href="https://www.cuisine-japon.fr/recette-melon-pan/" target="_blank">Recette</a>
+            
+            </div>
         </div>
 
     </div>
