@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nihongo</title>
-    <link rel="shortcut icon" href="icon.png">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../img/icon.png">
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css">
 </head>
 <style>
 
@@ -52,10 +52,10 @@
 <body>
 
     <header id="mainHeader">
-        <button id="menuToggle" onclick="display_menu()"><img src="hamburger.png" alt="Ouvrir / Fermer le menu" /></button>
+        <button id="menuToggle" onclick="display_menu()"><img src="../img/hamburger.png" alt="Ouvrir / Fermer le menu" /></button>
         <nav id="mainNav">
             <ul>
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="../index.html">Accueil</a></li>
                 <li><a href="vocabulaire.html">Vocabulaire</a></li>
                 <li><a href="grammaire.html">Grammaire</a></li>
                 <li><a href="evenements.html">Evenements</a></li>
@@ -77,14 +77,14 @@
             <div id="player-selection"></div><br>
             Nombre de secondes par question : <input id="timer" type="number" value="10" min="5" max="60" autocomplete="off" required><br><br>
             <div id="button-list" onclick="submit()">
-                <button class="content" type="submit" formaction="test-hiraganas.html">Hiraganas</button>
-                <button class="content" type="submit" formaction="test-katakanas.html">Katakanas</button>
+                <button class="content" type="submit" formaction="tests/test-hiraganas.html">Hiraganas</button>
+                <button class="content" type="submit" formaction="tests/test-katakanas.html">Katakanas</button>
             </div>
         </form>
     </div>
 
 </body>
-<script src="data.js"></script>
+<script src="tests/JS/data.js"></script>
 <script>
     
     localStorage.clear();

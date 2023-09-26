@@ -86,7 +86,7 @@ header{
 }
 
 #bg-img{
-    background: url(japan.jpg) right center / cover no-repeat;
+    background: url(../img/japan.jpg) right center / cover no-repeat;
     z-index: -2;
 }
 
@@ -145,7 +145,7 @@ header{
 }
 
 #bg1{
-    background-image: url(sakura.jpg);
+    background-image: url(../img/sakura.jpg);
 }
 
 .infos{
