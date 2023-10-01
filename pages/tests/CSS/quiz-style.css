@@ -58,6 +58,21 @@ button{
     color: forestgreen;
 }
 
+#answer{
+    margin: 10px;
+}
+
+#answer > div,  #answer > input{
+    display: none;
+}
+
+#answer button{
+    padding: 10px;
+    margin: 5px;
+    font-size: 2vh;
+    width: 15vh;
+}
+
 #answer input{
     font-size: 2vh;
     width: 6vh;
