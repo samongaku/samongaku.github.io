@@ -1,3 +1,15 @@
+function display_players()
+{
+    if (players.length < 2)
+    {
+        display_quiz();
+        return ;
+    }
+    for (let i = 0; players[i]; i++)
+        document.getElementById("profiles").innerHTML += "<div><img src='img_profil/" + players[i][1] + "'><p>" + players[i][0] + "</p></div>";
+    document.getElementById("quiz").style.display = "none";
+}
+
 function sort_tab()
 {
     var tmp, t1, t2;
@@ -51,18 +63,69 @@ function print_score()
     print_score_table();
 }
 
+function generate_random_answers()
+{
+    var n;
+    var pos;
+    var char = get_char_index();
+    
+    if (level == "1")
+        n = [0, 1];
+    else if (level == "2")
+        n = [0, 1, 3, 4];
+    else if (level == "3")
+        n = [0, 1, 3, 4, 6, 7];
+    else if (level == "4")
+        n = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    else
+        return ;
+    
+    for (let i = 0; i < n.length; i++)
+    {
+        pos = Math.floor(Math.random() * kanas.length);
+        while (kanas[pos][1] == kanas[char][1])
+            pos = Math.floor(Math.random() * kanas.length);
+        answer.getElementsByTagName("button")[n[i]].innerHTML = kanas[pos][1];
+    }
+    
+    pos = Math.floor(Math.random() * n.length);
+    answer.getElementsByTagName("button")[n[pos]].innerHTML = kanas[char][1];
+}
+
+function print_answer()
+{
+    answer.style.display = "block";
+    if (level == "5")
+    {
+        answer.getElementsByTagName("input")[0].style.display = "inline";
+        answer.getElementsByTagName("input")[0].value = "";
+        answer.getElementsByTagName("input")[0].focus();
+    }
+    else
+        document.getElementById("lineBT1").style.display = "block";
+    if (level == "2" || level == "3" || level == "4")
+        document.getElementById("lineBT2").style.display = "block";
+    if (level == "3" || level == "4")
+        document.getElementById("lineBT3").style.display = "block";
+    if (level == "1" || level == "2" || level == "3")
+    {
+        answer.getElementsByTagName("button")[2].style.display = "none";
+        answer.getElementsByTagName("button")[5].style.display = "none";
+        answer.getElementsByTagName("button")[8].style.display = "none";
+    }
+    generate_random_answers();
+}
+
 var num = 0;
 var cpy = new Array();
 
 function print_quiz_elements()
 {
     document.getElementById("question").innerHTML = "Question " + (num + 1) + "/" + len;
-    document.getElementById("answer").style.display = "inline";
-    document.getElementById("answer").value = "";
-    document.getElementById("answer").focus();
     document.getElementById("bt").style.display = "none";
     document.getElementById("countdown").style.display = "block";
     document.getElementById("score").style.display = "none";
+    print_answer();
 }
 
 function print_random_char()
@@ -111,8 +174,8 @@ function display_quiz()
         return ;
     }
     
-    print_quiz_elements();
     print_random_char();
+    print_quiz_elements();
     print_player_profile();
     num++;
 }

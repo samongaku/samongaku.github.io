@@ -72,14 +72,28 @@
 
     <div id="container">
         <form id="settings">
-            Nombre de participants : 
+            
+            Nombre de participants :
             <input id="nb-player" type="number" value="1" min="1" max="20" onkeyup="gen_select()" onclick="gen_select()" autocomplete="off" required><br>
             <div id="player-selection"></div><br>
-            Nombre de secondes par question : <input id="timer" type="number" value="10" min="5" max="60" autocomplete="off" required><br><br>
+            
+            Difficulté :
+            <select id="level">
+                <option value="1">Très Facile</option>
+                <option value="2" selected>Facile</option>
+                <option value="3">Moyen</option>
+                <option value="4">Difficile</option>
+                <option value="5">Très Difficile</option>
+            </select><br><br>
+            
+            Nombre de secondes par question :
+            <input id="timer" type="number" value="10" min="5" max="60" autocomplete="off" required><br><br>
+            
             <div id="button-list" onclick="submit()">
                 <button class="content" type="submit" formaction="tests/test-hiraganas.html">Hiraganas</button>
                 <button class="content" type="submit" formaction="tests/test-katakanas.html">Katakanas</button>
             </div>
+            
         </form>
     </div>
 
@@ -125,6 +139,7 @@
     {
         listLogin = [];
         var seconds = document.getElementById("timer").value;
+        var level = document.getElementById("level").value;
         var select = document.getElementsByClassName("slct")[0];
         
         for (let i = 0; select; i++)
@@ -135,6 +150,7 @@
         }
         localStorage.setItem("list", listLogin);
         localStorage.setItem("timer", seconds);
+        localStorage.setItem("level", level);
     }
 
 </script>

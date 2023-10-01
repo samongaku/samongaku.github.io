@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Rubik+Iso&display=swap');
 
+button{
+    cursor: pointer;
+}
+
 #start{
     padding: 50px;
 }
@@ -54,7 +58,7 @@
     color: forestgreen;
 }
 
-#answer{
+#answer input{
     font-size: 2vh;
     width: 6vh;
     text-align: center;
