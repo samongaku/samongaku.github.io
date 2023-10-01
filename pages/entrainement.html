@@ -139,8 +139,9 @@
         var seconds = document.getElementById("timer").value;
         var level = document.getElementById("level").value;
         var select = document.getElementsByClassName("slct")[0];
+        var nbPlayer = parseInt(document.getElementById("nb-player").value);
         
-        for (let i = 0; select; i++)
+        for (let i = 0; i < nbPlayer; i++)
         {
             var login = select.value;
             listLogin.push(login);
